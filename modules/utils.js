@@ -2,4 +2,12 @@
 function capitalizeFirstLetter(word){
     return word.charAt(0).toUpperCase() + word.slice(1)
 }
-module.exports = {capitalizeFirstLetter}
+
+function sayWord(word){
+    console.log(`SAT IT LOUD: ${word}`)
+}
+
+function addNumbers(num1, num2){
+    return num1 + num2
+}
+module.exports = {capitalizeFirstLetter, sayWord, addNumbers}

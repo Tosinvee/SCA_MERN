@@ -10,3 +10,11 @@ let word = myFunction.capitalizeFirstLetter('hello')
 
 console.log(word)
 
+myFunction.sayWord('she code africa')
+//another way to import a module using {}
+const{addNumbers} = require('./modules/utils')
+console.log(addNumbers(2,5))
+
+
+const data = require('./data/users.json')
+console.log(data)
