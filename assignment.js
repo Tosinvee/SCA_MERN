@@ -1,7 +1,7 @@
 const fs = require('fs');
 const https = require('https');
 
-const filePath = './public/Tunde_onakoya.html';
+const filePath = './public/tunde_onakoya.html';
 let responseData = '';
 
 https.get('https://en.wikipedia.org/wiki/Tunde_Onakoya', (response) => {
@@ -20,6 +20,9 @@ https.get('https://en.wikipedia.org/wiki/Tunde_Onakoya', (response) => {
                 console.log('File has been saved!');
             }
         });
+    });
+    response.on('close', () => {
+        console.log('Connection closed.');
     });
 }).on('error', (error) => {
     console.error('Error making request:', error);
